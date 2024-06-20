@@ -1,0 +1,65 @@
+body {
+    margin: 0px;
+}
+
+.topnav {
+    background-color: #0F4C75;
+    overflow: hidden;
+    display: flex;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+    float: right;
+    color: #f2f2f2;
+    text-align: right;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: bold;
+  }
+  
+  /* Change the color of links on hover */
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  /* Add a color to the active/current link */
+  /* .topnav a.active {
+    background-color: #BBE1FA;
+    color: rgb(27, 38, 44);
+  } */
+
+#logo {
+    width: 45px;
+    height: 45px;
+
+}
+
+#companyName {
+    color: whitesmoke;
+    font-weight: bold;
+    padding: 0px 5px 0px 5px;
+    float: left;
+}
+
+#login-pic {
+    /* float: right; */
+    width: 45px;
+    height: 45px;
+    cursor:pointer;
+}
+
+/* Right-aligned section inside the top navigation */
+/* .topnav-right {
+    float: right;
+    display: grid;
+} */
+
+/* img {
+    height: auto; 
+    max-width: 100%;
+    object-fit: fill;
+} */
+

@@ -20,9 +20,9 @@ const path = require('path');
 
 const router = {
   home: (request, response) => {
-    if (request.url === '/' || request.url === './heap_frontend/mainpage_firstClick.html') {
+    if (request.url === '/' || request.url === './heap_frontend/scamNews.html') {
       response.writeHead(200, { 'Content-Type': 'text/html' });
-      fs.readFile('./heap_frontend/mainpage_firstClick.html', (err, data) => {
+      fs.readFile('./heap_frontend/scamNews.html', (err, data) => {
         if (err) {
           response.writeHead(500);
           response.end('Error loading index.html');

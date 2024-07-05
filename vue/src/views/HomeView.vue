@@ -68,37 +68,12 @@ import TheWelcome from '../components/TheWelcome.vue'
                 </div>
             </div>
         </div>
-        <!-- <div class="row">
-            <div class="column">
-                <div class="polaroid">
-                    <img id="buildings" src="/img/buildings.jpg">
-                    <div class="polaroid_container">
-                        <h1 class="fw-bolder">Our Vision</h1>
-                        <center>Redesigning financial accessibility for inclusivity</center>
-                    </div>
-                </div>
-            </div>
-
-            <div class="column">
-                <div class="polaroid-right">
-                    <img id="buildings" src="/img/mission.jpg">
-                    <div class="polaroid_container">
-                        <h1 class="fw-bolder">Our Mission</h1>
-                        <center>Assisting Persons with Disabilities in accessing critical financial information</center>
-                    </div>
-                </div>
-            </div>
-                
-
-        </div> -->
 
     </body>
 </template>
 
-<style scoped>
-body {
-    margin: 0px;
-}
+<style>
+
 
 .topnav {
     background-color: #0F4C75;

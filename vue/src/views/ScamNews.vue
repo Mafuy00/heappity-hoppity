@@ -9,7 +9,19 @@
 
             <div class="topnav-right">
                 <a class="active" href="#home">Home</a>
-                <a href="#services">Services</a>
+
+                <div class="dropdown">
+                    <button class="dropbtn">Services
+                    <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                    <a href="#">Accounts</a>
+                    <a href="#">Scam News</a>
+                    <a href="#">Forecasting</a>
+                    </div>
+                </div> 
+
+                
                 <a href="#aboutus">About Us</a>
                 <a href="#contactus">Contact Us</a>
                 <a href="#login">Hi, User!</a>
@@ -24,7 +36,6 @@
             <div class="learnScams">
                 <p> Learn more about scams here. <br>
                     Be aware and protect yourself from scams!
-                    <!-- <input type="button" value="Sign Up" id="signupBtn"> -->
                 </p>
 
                 
@@ -88,10 +99,12 @@
 
     .topnav {
         background-color: #0F4C75;
-        overflow: hidden;
+        /* overflow: hidden; */
+        margin: 0;
         display: flex;
         justify-content: space-between;
         font-family: Arial, Helvetica, sans-serif;
+        
     }
 
     /* Style the links inside the navigation bar */
@@ -112,6 +125,59 @@
         color: black;
     }
     
+    .dropdown {
+    float: left;
+    /* overflow: hidden; */
+    }   
+
+    .dropdown .dropbtn {
+    font-size: 16px;  
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    /* font-family: inherit; */
+    margin: 0;
+    font-size: 17px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .navbar a:hover, .dropdown:hover .dropbtn {
+    background-color: white;
+    color:black;
+    }
+
+    .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: -10;
+    }
+
+    .dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    }
+
+    .dropdown-content a:hover {
+    background-color: #0F4C75;
+    color:white;
+    }
+
+    .dropdown:hover .dropdown-content {
+    display: block;
+    /* position: absolute; */
+    z-index: 10;
+    }
+
     /* Add a color to the active/current link */
     /* .topnav a.active {
         background-color: #BBE1FA;
@@ -173,9 +239,9 @@
         display: flex;
     } 
 
-    .signup p {
-        margin-left: 30%;
-        margin-top: 50%;
+    .learnScams p {
+        margin-left: 20%;
+        margin-top: 40%;
         font-weight: bold;
         font-family: Arial, Helvetica, sans-serif;
         text-shadow: 2px 2px 2px black;

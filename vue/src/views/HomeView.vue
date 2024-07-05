@@ -48,8 +48,26 @@ import TheWelcome from '../components/TheWelcome.vue'
         </div>
 
         <!--Vision & Mission-->
-        <div class="row row-cols-1 row-cols-md-2 g-4">
-            <div class="col">
+
+        <div class="card-deck">
+            <div class="card">
+                <img src="/img/buildings.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h3 class="card-title">Our Vision</h3>
+                    <p class="card-text">Redesigning financial accessibility for inclusivity</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="/img/mission.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h3 class="card-title">Our Mission</h3>
+                    <p class="card-text">Assisting Persons with Disabilities in accessing critical financial information</p>
+                </div>
+            </div>
+        </div>
+
+
+            <!-- <div class="col">
                 <div class="card">
                 <img src="/img/buildings.jpg" class="card-img-top" alt="...">
                 <div class="card-body">
@@ -66,14 +84,18 @@ import TheWelcome from '../components/TheWelcome.vue'
                     <p class="card-text">Assisting Persons with Disabilities in accessing critical financial information</p>
                 </div>
                 </div>
-            </div>
-        </div>
+            </div> -->
+        
 
     </body>
 </template>
 
-<style>
+<style scoped>
 
+body{
+    margin: 0px;
+    border:0px;
+}
 
 .topnav {
     background-color: #0F4C75;
@@ -81,6 +103,7 @@ import TheWelcome from '../components/TheWelcome.vue'
     display: flex;
     justify-content: space-between;
     font-family: Arial, Helvetica, sans-serif;
+    width: 100%;
 }
 
 /* Style the links inside the navigation bar */
@@ -108,7 +131,7 @@ import TheWelcome from '../components/TheWelcome.vue'
   } */
 
 #logo {
-    width: 50px;
+    width: 55px;
     height: 45px;
     padding: 0px;
     display: flex;
@@ -160,6 +183,7 @@ import TheWelcome from '../components/TheWelcome.vue'
     padding: 0%;
     margin: 0%;
     display: flex;
+    width: 100%;
 } 
 
 .signup p {
@@ -195,19 +219,28 @@ import TheWelcome from '../components/TheWelcome.vue'
 }
 
 /* Vision & mission */
+/* 
 .col {
     padding:5px;
-    padding-left: 5px;
-}
+    padding-left: 10px;
+    width: 600px;
+} */
 
-.row{
-    padding-left: 5px;
+.card-deck{
+    padding-left: 3px;
+    padding-top: 5px;
+    width: 100%;
+    display: flex;
 }
 
 .card {
     text-align: center;
-    width: 99%;
+    /* width: 90%; */
     display: flex;
+}
+
+.card-img-top{
+    border-radius: 5px;
 }
 
 .card-title {

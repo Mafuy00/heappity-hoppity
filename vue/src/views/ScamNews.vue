@@ -23,8 +23,15 @@
 
                 
                 <a href="#aboutus">About Us</a>
-                <a href="#contactus">Contact Us</a>
-                <a href="#login">Hi, User!</a>
+                <div class="dropdown">
+                    <button class="dropbtn">Hi, Asher Brown!
+                    <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                    <a href="#">Settings</a>
+                    <a href="#">Logout</a>
+                    </div>
+                </div> 
                 <img id="login-pic" src="/img/icons8-male-user-48.png" alt="Bank Building Image"> 
             </div>
 
@@ -34,8 +41,9 @@
         
         <div class="mainPic">
             <div class="learnScams">
-                <p> Learn more about scams here. <br>
-                    Be aware and protect yourself from scams!
+                <p id="scamtext"> Learn more about scams here. <br>
+                    Be aware and protect yourself <br>
+                    from scams!
                 </p>
 
                 
@@ -44,24 +52,23 @@
         </div>
 
         <!--Scam News-->
-        <div class="row row-cols-1 row-cols-md-2 g-4">
-            <div class="col">
-                <div class="card">
-                <img src="/img/buildings.jpg" class="card-img-top" alt="...">
+        <div class="card-deck">
+            
+            <div class="card">
+            <img src="/img/buildings.jpg" class="card-img-top" alt="...">
                 <div class="card-body">
                     <h2>Straits Times: More than 110 suspicious bank accounts with over $400k blocked by UOB or seized by police</h2>
                     <a href="https://www.straitstimes.com/singapore/more-than-110-suspicious-bank-accounts-with-over-400k-blocked-by-uob-or-seized-by-police">Learn More</a>
-                </div>
-                </div>
+                </div> 
             </div>
-            <div class="col">
+            
                 <div class="card">
                 <img src="/img/mission.jpg" class="card-img-top" alt="...">
                 <div class="card-body">
                     <h2>Straits Times: Man allegedly linked to parcel delivery phishing scams charged with cheating, money laundering</h2>
                     <a href="https://www.straitstimes.com/singapore/courts-crime/man-allegedly-linked-to-parcel-delivery-phishing-scams-charged-with-cheating-money-laundering">Learn More</a>
                 </div>
-                </div>
+                
             </div>
         </div>
 
@@ -306,7 +313,11 @@
         opacity: 1;
         font-size: 40px;
         white-space: nowrap;
-        /* display:flex; */
+        display: flex;
+    }
+
+    #scamtext{
+        display: grid;
     }
 
     #signupBtn{
@@ -329,7 +340,30 @@
     }
 
     /* Vision & mission */
-    .col {
+
+    .card-deck{
+    padding-left: 3px;
+    padding-top: 5px;
+    width: 100%;
+    display: flex;
+}
+
+    .card {
+        text-align: center;
+        /* width: 90%; */
+        display: flex;
+    }
+
+    .card-img-top{
+        border-radius: 5px;
+    }
+
+    .card-title {
+        font-weight: bold;
+    }
+
+
+    /* .col {
         padding:5px;
         padding-left: 5px;
     }
@@ -348,6 +382,6 @@
 
     .card-title {
         font-weight: bold;
-    }
+    } */
 
 </style>

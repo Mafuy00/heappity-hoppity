@@ -32,7 +32,15 @@
                     
                     <a href="#aboutus">About Us</a>
                     <a href="#contactus">Contact Us</a>
-                    <a href="#login">Hi, User!</a>
+                    <div class="dropdown">
+                    <button class="dropbtn">Hi, Asher Brown!
+                    <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                    <a href="#">Settings</a>
+                    <a href="#">Logout</a>
+                    </div>
+                </div> 
                     <img id="login-pic" src="/img/icons8-male-user-48.png" alt="Bank Building Image"> 
                 </div>
     
@@ -66,9 +74,10 @@
         
 </template>
 
-    <style>
+    <style scoped>
     body {
         background-color: #0F4C75 !important;
+        min-height: 100vh;
     }
 
 

@@ -2,7 +2,7 @@
     <body>
             
 
-            <div class="container">
+<div class="container">
 <div class="row justify-content-center">
     <div class="col-12 col-lg-10 col-xl-8 mx-auto">
         <!-- <h2>Settings</h2> -->

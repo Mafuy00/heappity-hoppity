@@ -1,13 +1,34 @@
 <template>
     <body>
-            
-
+        <div class="container">
+        <p>
+            Download free NVDA screen reader here for accessibility!<br>
+            Do follow the website's instructions and seek assistence if necessary.<br>
+        <a href="https://www.nvaccess.org/download/">https://www.nvaccess.org/download/</a>
+        </p>
+        </div>
     </body>
 </template>
 
     <style scoped>
-    body {
+    body, html {
         background-color: #0F4C75 !important;
+        padding: 0;
+        margin: 0;
+        /* width: 100vh; */
+        min-height: 81.1vh;
+    }
+
+    .container p{
+        font-weight: bold;
+        font-family: Arial, Helvetica, sans-serif;
+        text-shadow: 2px 2px 2px black;
+        color: white;
+        opacity: 1;
+        font-size: 20px;
+        white-space: nowrap;
+        justify-content: center;
+        text-align: center;
     }
 
     .topnav {

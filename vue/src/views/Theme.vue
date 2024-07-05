@@ -1,47 +1,71 @@
 <template>
-    <body>
-        <div class="theme">
-            Light
-            <hr class="my-4" />
-            Dark
-            <hr class="my-4" />
-            Contrasting palette 1
-            <hr class="my-4" />
-            Contrasting palette 2
-            <hr class="my-4" />
-            Vibrant
-            <hr class="my-4" />
-            Monochromatic
-            <hr class="my-4" />
-            Red-Green Color
-            <hr class="my-4" />
-            Blue-Yellow Color
 
+    <body>
+        <div class="row justify-content-center">
+            <div class="theme">
+                <button type="button" class="btn btn-lg">Light</button>
+                <br><br>
+                <button type="button" class="btn btn-lg">Dark</button>
+                <br><br>
+                <button type="button" class="btn btn-lg">Contrasting palette 1</button>
+                <br><br>
+                <button type="button" class="btn btn-lg">Contrasting palette 2</button>
+                <br><br>
+                <button type="button" class="btn btn-lg">Vibrant</button>
+                <br><br>
+                <button type="button" class="btn btn-lg">Monochromatic</button>
+                <br><br>
+                <button type="button" class="btn btn-lg">Red-Green Color</button>
+                <br><br>
+                <button type="button" class="btn btn-lg">Blue-Yellow Color</button>
+                
+            </div>
         </div>
         
-
-            
-
     </body>
 </template>
 
-    <style scoped>
+<style scoped>
+
 
     .theme{
         color:white;
-        padding-left: 80px;
+        /* padding-left: 80px; */
         font-size: x-large;
         font-weight: bold;
+        /* display: grid; */
+        /* position: relative; */
+        text-align: center;
+    }
+
+    .btn{
+        color:white;
+        font-weight: bold;
+        border-color: white;
+        width: 300px;
+        flex-direction: row;
+        flex-wrap: wrap;
+        display:inline-block;
+    }
+
+    .btn:hover{
+        background-color: white;
+        color: black;
     }
 
     .my-4{
         border: 1px solid white;
-        border-color: white;
         opacity: 100%;
+        width: 690px;
+        align: right;
     }
     
-    body {
+    body, html {
         background-color: #0F4C75 !important;
+        padding: 0;
+        margin: 0;
+        /* width: 100vh; */
+        min-height: 81.1vh;
     }
 
     .topnav {

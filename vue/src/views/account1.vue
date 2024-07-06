@@ -1,58 +1,32 @@
 <template>
-    <body>
-            <div class="topnav">
-                <div>
-                    <img id="logo" src="/img/icons8-bank-building-100.png" alt="Bank Building Image"> 
-                    
-                </div>
-                <p id="companyName">GuidedCents</p>
-    
-                <div class="topnav-right">
-                    <a class="active" href="#home">Home</a>
-                    <!-- <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Services</a>
-                    <div class="dropdown-menu">
-                        <a class="dropdown-item" href="#">Accounts</a>
-                        <a class="dropdown-item" href="#">Scam News</a>
-                        <a class="dropdown-item" href="#">Forecasting</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Separated link</a>
-                    </div> -->
-    
-                    <div class="dropdown">
-                        <button class="dropbtn">Services
-                        <i class="fa fa-caret-down"></i>
-                        </button>
-                        <div class="dropdown-content">
-                        <a href="#">Accounts</a>
-                        <a href="#">Scam News</a>
-                        <a href="#">Forecasting</a>
-                        </div>
-                    </div> 
-    
-                    
-                    <a href="#aboutus">About Us</a>
-                    <a href="#contactus">Contact Us</a>
-                    <a href="#login">Hi, User!</a>
-                    <img id="login-pic" src="/img/icons8-male-user-48.png" alt="Bank Building Image"> 
-                </div>
-    
-            </div>
 
-            <ul class="nav nav-tabs">
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Account 1</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Account 2</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Account 3</a>
-                </li>
-                </ul>
-        </body>
+    <body>
+        <nav class="nav nav-pills flex-column flex-sm-row">
+            <router-link to="/accounts/account1/daily" class="flex-sm-fill text-sm-center nav-link" aria-current="page">Daily</router-link>
+            <router-link to="/accounts/account1/weekly" class="flex-sm-fill text-sm-center nav-link" aria-current="page">Weekly</router-link>
+            <router-link to="/accounts/account1/monthly" class="flex-sm-fill text-sm-center nav-link" aria-current="page">Monthly</router-link>
+        </nav>
+        <div>
+            <router-view />
+        </div>
+    </body>
 </template>
 
     <style scoped>
+    
+    .nav-link:hover, 
+    .nav-link.router-link-active,
+    .nav-link.router-link-exact-active{
+        color:black;
+        background-color: white;
+        font-weight: bold;
+        border-radius: 2px;
+    }
+
+    .nav-link{
+        font-weight: bold;
+    }
+
     body {
         background-color: #0F4C75 !important;
     }
@@ -64,7 +38,6 @@
         display: flex;
         justify-content: space-between;
         font-family: Arial, Helvetica, sans-serif;
-        
     }
 
     /* Style the links inside the navigation bar */

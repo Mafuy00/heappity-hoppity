@@ -9,11 +9,13 @@
         <div>
             <router-view />
         </div>
+        
+
     </body>
 </template>
 
     <style scoped>
-    
+    /*Nav bar */
     .nav-link:hover, 
     .nav-link.router-link-active,
     .nav-link.router-link-exact-active{

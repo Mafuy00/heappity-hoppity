@@ -23,12 +23,12 @@
     
                     
                     <a href="#aboutus">About Us</a>
-                    <a href="#contactus">Contact Us</a>
-                    <a href="#login">Hi, User!</a>
+                    <a href="#login">Hi, Asher Brown!</a>
                     <img id="login-pic" src="/img/icons8-male-user-48.png" alt="Bank Building Image"> 
                 </div>
     
             </div>
+
 
             <div class="container">
                 <div class="row justify-content-center">
@@ -47,6 +47,7 @@
                                 </li>
                             </ul>
                         </div>
+                        <p class="recordDelete">add delete accounts and record buttons here</p>
                     </div>
                 </div>
             </div>
@@ -54,10 +55,16 @@
                 <div>
                 <router-view />
                 </div>
+
+
         </body>
 </template>
 
 <style scoped>
+.recordDelete{
+    color:white;
+}
+
 body {
     background-color: #0F4C75 !important;
     min-height: 100vh;

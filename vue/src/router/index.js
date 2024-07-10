@@ -13,6 +13,7 @@ import daily from '../views/dashboardDaily.vue'
 import weekly from '../views/dashboardWeekly.vue'
 import monthly from '../views/dashboardMonthly.vue'
 import mainPage from '../views/MainPage.vue'
+import addRecord from '../views/addRecord.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -38,6 +39,10 @@ const router = createRouter({
       path: '/scamNews',
       name: 'Scam News',
       component: ScamNews
+    },
+    {
+      path: '/accounts/addRecord',
+      component: addRecord
     },
     {
       path: '/accounts',

@@ -1,7 +1,7 @@
 <template>
 
     <body>
-        <div class="row justify-content-center">
+        <div class="container">
             <div class="theme">
                 <button type="button" class="btn btn-lg">Light</button>
                 <br><br>
@@ -57,13 +57,13 @@
         border: 1px solid white;
         opacity: 100%;
         width: 690px;
-        align: right;
+        
     }
     
     body, html {
         background-color: #0F4C75 !important;
-        padding: 0;
-        margin: 0;
+        padding: 0px;
+        margin: 0px;
         /* width: 100vh; */
         min-height: 81.1vh;
     }

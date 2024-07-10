@@ -48,6 +48,8 @@
                             </ul>
                         </div>
                         <p class="recordDelete">add delete accounts and record buttons here</p>
+                        
+
                     </div>
                 </div>
             </div>
@@ -59,6 +61,7 @@
 
         </body>
 </template>
+
 
 <style scoped>
 .recordDelete{

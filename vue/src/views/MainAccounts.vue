@@ -1,33 +1,6 @@
 <template>
     <body>
-            <div class="topnav">
-                <div>
-                    <img id="logo" src="/img/icons8-bank-building-100.png" alt="Bank Building Image"> 
-                    
-                </div>
-                <p id="companyName">GuidedCents</p>
-    
-                <div class="topnav-right">
-                    <a class="active" href="#home">Home</a>
-    
-                    <div class="dropdown">
-                        <button class="dropbtn">Services
-                        <i class="fa fa-caret-down"></i>
-                        </button>
-                        <div class="dropdown-content">
-                        <a href="#">Accounts</a>
-                        <a href="#">Scam News</a>
-                        <a href="#">Forecasting</a>
-                        </div>
-                    </div> 
-    
-                    
-                    <a href="#aboutus">About Us</a>
-                    <a href="#login">Hi, Asher Brown!</a>
-                    <img id="login-pic" src="/img/icons8-male-user-48.png" alt="Bank Building Image"> 
-                </div>
-    
-            </div>
+            
 
 
             <div class="container">
@@ -47,9 +20,13 @@
                                 </li>
                             </ul>
                         </div>
-                        <p class="recordDelete">add delete accounts and record buttons here</p>
-                        
-
+                        <button type="button" class="btn btn-lg">Add account</button>
+                        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                        <button type="button" class="btn btn-lg">Delete account</button>
+                        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                        <button type="button" class="btn btn-lg">Add record</button>
+                        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                        <button type="button" class="btn btn-lg">Delete record</button>
                     </div>
                 </div>
             </div>
@@ -67,6 +44,22 @@
 .recordDelete{
     color:white;
 }
+
+.btn{
+        color:white;
+        font-weight: bold;
+        border-color: white;
+        width: 20%;
+        flex-direction: row;
+        flex-wrap: wrap;
+        display:inline-block;
+        font-size: large;
+    }
+
+    .btn:hover{
+        background-color: white;
+        color: black;
+    }
 
 body {
     background-color: #0F4C75 !important;

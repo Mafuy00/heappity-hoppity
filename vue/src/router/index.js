@@ -14,6 +14,7 @@ import weekly from '../views/dashboardWeekly.vue'
 import monthly from '../views/dashboardMonthly.vue'
 import mainPage from '../views/MainPage.vue'
 import addRecord from '../views/addRecord.vue'
+import navBar from '../views/NavBar.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -32,97 +33,191 @@ const router = createRouter({
       component: () => import('../views/AboutView.vue')
     },
     {
-      path: '/mainPage',
-      component: mainPage
-    },
-    {
-      path: '/scamNews',
-      name: 'Scam News',
-      component: ScamNews
+      path: '/nav',
+      component: navBar, 
+      children: [
+        {
+          path: '/mainPage',
+          component: mainPage
+        },
+        {
+          path: '/scamNews',
+          name: 'Scam News',
+          component: ScamNews
+        },
+        {
+          path: '/settings',
+          name: 'settings',
+          component: settings,
+          children: [
+          {
+            path: 'profile',
+            component: profile
+          },
+          {
+            path: 'theme',
+            component: theme
+          },{
+            path: 'screenReader',
+            component: screenReader
+          }]
+        },
+        {
+          path: '/accounts',
+          name: 'accounts',
+          component: Accounts,
+          children: [
+            {
+              path: 'account1',
+              component: account1,
+              children: [
+                {
+                  path: 'daily',
+                  component: daily
+                },
+                {
+                  path: 'weekly',
+                  component: weekly
+                },
+                {
+                  path: 'monthly',
+                  component: monthly
+                }
+                
+              ]
+            },
+            {
+              path: 'account2',
+              component: account2,
+              children: [
+                {
+                  path: 'daily',
+                  component: daily
+                },
+                {
+                  path: 'weekly',
+                  component: weekly
+                },
+                {
+                  path: 'monthly',
+                  component: monthly
+                }
+                
+              ]
+            },{
+              path: 'account3',
+              component: account3,
+              children: [
+                {
+                  path: 'daily',
+                  component: daily
+                },
+                {
+                  path: 'weekly',
+                  component: weekly
+                },
+                {
+                  path: 'monthly',
+                  component: monthly
+                } 
+              ]}
+          ]
+        }
+      ]
     },
     {
       path: '/accounts/addRecord',
       component: addRecord
     },
-    {
-      path: '/accounts',
-      name: 'accounts',
-      component: Accounts,
-      children: [
-        {
-          path: 'account1',
-          component: account1,
-          children: [
-            {
-              path: 'daily',
-              component: daily
-            },
-            {
-              path: 'weekly',
-              component: weekly
-            },
-            {
-              path: 'monthly',
-              component: monthly
-            }
+    // {
+    //   path: '/mainPage',
+    //   component: mainPage
+    // },
+    // {
+    //   path: '/scamNews',
+    //   name: 'Scam News',
+    //   component: ScamNews
+    // },
+
+    // {
+    //   path: '/accounts',
+    //   name: 'accounts',
+    //   component: Accounts,
+    //   children: [
+    //     {
+    //       path: 'account1',
+    //       component: account1,
+    //       children: [
+    //         {
+    //           path: 'daily',
+    //           component: daily
+    //         },
+    //         {
+    //           path: 'weekly',
+    //           component: weekly
+    //         },
+    //         {
+    //           path: 'monthly',
+    //           component: monthly
+    //         }
             
-          ]
-        },
-        {
-          path: 'account2',
-          component: account2,
-          children: [
-            {
-              path: 'daily',
-              component: daily
-            },
-            {
-              path: 'weekly',
-              component: weekly
-            },
-            {
-              path: 'monthly',
-              component: monthly
-            }
+    //       ]
+    //     },
+    //     {
+    //       path: 'account2',
+    //       component: account2,
+    //       children: [
+    //         {
+    //           path: 'daily',
+    //           component: daily
+    //         },
+    //         {
+    //           path: 'weekly',
+    //           component: weekly
+    //         },
+    //         {
+    //           path: 'monthly',
+    //           component: monthly
+    //         }
             
-          ]
-        },{
-          path: 'account3',
-          component: account3,
-          children: [
-            {
-              path: 'daily',
-              component: daily
-            },
-            {
-              path: 'weekly',
-              component: weekly
-            },
-            {
-              path: 'monthly',
-              component: monthly
-            }
+    //       ]
+    //     },{
+    //       path: 'account3',
+    //       component: account3,
+    //       children: [
+    //         {
+    //           path: 'daily',
+    //           component: daily
+    //         },
+    //         {
+    //           path: 'weekly',
+    //           component: weekly
+    //         },
+    //         {
+    //           path: 'monthly',
+    //           component: monthly
+    //         }
             
-          ]
-        }]
-    },
-    {
-      path: '/settings',
-      name: 'settings',
-      component: settings,
-      children: [
-      {
-        path: 'profile',
-        component: profile
-      },
-      {
-        path: 'theme',
-        component: theme
-      },{
-        path: 'screenReader',
-        component: screenReader
-      }]
-    }
+    //       ]
+    //     }]
+    // },
+    // {
+    //   path: '/settings',
+    //   name: 'settings',
+    //   component: settings,
+    //   children: [
+    //   {
+    //     path: 'profile',
+    //     component: profile
+    //   },
+    //   {
+    //     path: 'theme',
+    //     component: theme
+    //   },{
+    //     path: 'screenReader',
+    //     component: screenReader
+    //   }]
+    // }
   ]
 })
 

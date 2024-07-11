@@ -4,42 +4,7 @@ import TheWelcome from '../components/TheWelcome.vue'
 
 <template>  
       <body>
-        <div class="topnav">
-            <div>
-                <img id="logo" src="/img/icons8-bank-building-100.png" alt="Bank Building Image"> 
-                
-            </div>
-            <p id="companyName">GuidedCents</p>
-
-            <div class="topnav-right">
-                <a class="active" href="#home">Home</a>
-
-                <div class="dropdown">
-                    <button class="dropbtn">Services
-                    <i class="fa fa-caret-down"></i>
-                    </button>
-                    <div class="dropdown-content">
-                    <a href="#">Accounts</a>
-                    <a href="#">Scam News</a>
-                    <a href="#">Forecasting</a>
-                    </div>
-                </div> 
-
-                
-                <a href="#aboutus">About Us</a>
-                <div class="dropdown">
-                    <button class="dropbtn">Hi, Asher Brown!
-                    <i class="fa fa-caret-down"></i>
-                    </button>
-                    <div class="dropdown-content">
-                    <a href="#">Settings</a>
-                    <a href="#">Logout</a>
-                    </div>
-                </div> 
-                <img id="login-pic" src="/img/icons8-male-user-48.png" alt="Bank Building Image"> 
-            </div>
-
-        </div>
+        
           
           <!-- Main image to welcome users -->
           

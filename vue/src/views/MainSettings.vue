@@ -1,49 +1,6 @@
 <template>
     <body>
-            <div class="topnav">
-                <div>
-                    <img id="logo" src="/img/icons8-bank-building-100.png" alt="Bank Building Image"> 
-                    
-                </div>
-                <p id="companyName">GuidedCents</p>
-    
-                <div class="topnav-right">
-                    <a class="active" href="#home">Home</a>
-                    <!-- <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Services</a>
-                    <div class="dropdown-menu">
-                        <a class="dropdown-item" href="#">Accounts</a>
-                        <a class="dropdown-item" href="#">Scam News</a>
-                        <a class="dropdown-item" href="#">Forecasting</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Separated link</a>
-                    </div> -->
-    
-                    <div class="dropdown">
-                        <button class="dropbtn">Services
-                        <i class="fa fa-caret-down"></i>
-                        </button>
-                        <div class="dropdown-content">
-                        <a href="#">Accounts</a>
-                        <a href="#">Scam News</a>
-                        <a href="#">Forecasting</a>
-                        </div>
-                    </div> 
-    
-                    
-                    <a href="#aboutus">About Us</a>
-                    <div class="dropdown">
-                    <button class="dropbtn">Hi, Asher Brown!
-                    <i class="fa fa-caret-down"></i>
-                    </button>
-                    <div class="dropdown-content">
-                    <a href="#">Settings</a>
-                    <a href="#">Logout</a>
-                    </div>
-                </div> 
-                    <img id="login-pic" src="/img/icons8-male-user-48.png" alt="Bank Building Image"> 
-                </div>
-    
-            </div>
+            
 
             <div class="container">
                 <div class="row justify-content-center">

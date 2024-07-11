@@ -62,7 +62,7 @@
                     </select>
                 </div>
                 <br>
-                <button type="button" class="btn btn-lg">Add record</button>
+                <a href="/accounts/account1"><button type="button" class="btn btn-lg">Add record</button></a>
                 </form>
             </div>
         </div>
@@ -73,6 +73,11 @@
 </template>
 
 <style scoped>
+
+a {
+        color:white;
+        text-decoration: none;
+    }
 
 body {
     background-color: #0F4C75 !important;

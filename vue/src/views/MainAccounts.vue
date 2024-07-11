@@ -24,7 +24,7 @@
                         &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
                         <button type="button" class="btn btn-lg">Delete account</button>
                         &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-                        <button type="button" class="btn btn-lg">Add record</button>
+                        <a href="/accounts/addRecord"><button type="button" class="btn btn-lg">Add record</button></a>
                         &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
                         <button type="button" class="btn btn-lg">Delete record</button>
                     </div>
@@ -59,6 +59,11 @@
     .btn:hover{
         background-color: white;
         color: black;
+    }
+
+    a {
+        color:white;
+        text-decoration: none;
     }
 
 body {

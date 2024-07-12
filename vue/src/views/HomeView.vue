@@ -27,7 +27,7 @@ import TheWelcome from '../components/TheWelcome.vue'
                 <a href="#aboutus">About Us</a>
                 <a href="#contactus">Contact Us</a>
             
-                <a href="#login">Login</a>
+                <router-link to="/login">Login</router-link>
                 <img id="login-pic" src="/img/icons8-male-user-48.png" alt="Bank Building Image"> 
             </div>
 

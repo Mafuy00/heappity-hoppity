@@ -62,6 +62,15 @@
                     </select>
                 </div>
                 <br>
+                <div class="form-group">
+                    <label for="formGroupExampleInput3">Account</label>
+                    <select name="description" id="description" class="form-control">
+                        <option value="account1">Account 1</option>
+                        <option value="account2">Account 2</option>
+                        <option value="account2">Account 3</option>
+                    </select>
+                </div>
+                <br>
                 <a href="/accounts/account1"><button type="button" class="btn btn-lg">Add record</button></a>
                 </form>
             </div>

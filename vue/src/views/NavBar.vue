@@ -17,7 +17,7 @@
                     <div class="dropdown-content">
                     <router-link to="/accounts">Accounts</router-link>
                     <router-link to="/scamNews">Scam News</router-link>
-                    <a href="#">Forecasting</a>
+                    <router-link to="/mainForecasting">Forecasting</router-link>
                     </div>
                 </div> 
 

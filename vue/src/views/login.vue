@@ -16,7 +16,9 @@
                     <input id="password" type="password" placeholder="Password">
                 </div>
                 <div>
-                    <button id="login-btn">Login</button>
+                    <router-link to="/mainPage">
+                        <button id="login-btn">Login</button>
+                    </router-link>
                     <router-link to="/register">
                         <button id="register-btn">Register</button>
                     </router-link>

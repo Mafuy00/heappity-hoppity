@@ -17,6 +17,8 @@ import addRecord from '../views/addRecord.vue'
 import navBar from '../views/NavBar.vue'
 import login from '../views/login.vue'
 import register from '../views/register.vue'
+import mainForecasting from '../views/MainForecasting.vue'
+import forecast1 from '../views/forecast1.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -56,6 +58,24 @@ const router = createRouter({
           path: '/scamNews',
           name: 'Scam News',
           component: ScamNews
+        },
+        {
+          path: '/mainForecasting',
+          component: mainForecasting,
+          children: [
+            {
+              path: "/mainForecasting/forecast1",
+              component: forecast1
+            },
+            {
+              path: "/mainForecasting/forecast2",
+              component: forecast1
+            },
+            {
+              path: "/mainForecasting/forecast3",
+              component: forecast1
+            }
+          ]
         },
         {
           path: '/settings',

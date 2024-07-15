@@ -20,21 +20,25 @@
                                 </li>
                             </ul>
                         </div>
-                        
                     </div>
+
+
+                            
+
                 </div>
+
             </div>
 
-                <div>
+            <div>
                 <router-view />
-                </div>
-
+            </div>
 
         </body>
 </template>
 
 
 <style scoped>
+
 .recordDelete{
     color:white;
 }
@@ -63,6 +67,7 @@
 body {
     background-color: #0F4C75 !important;
     min-height: 100vh;
+
 }
 
 

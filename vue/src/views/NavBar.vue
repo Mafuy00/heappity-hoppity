@@ -48,6 +48,7 @@
   
   body {
         margin: 0px;
+
     }
 
     .topnav {
@@ -70,7 +71,7 @@
         text-align: right;
         padding: 14px 16px;
         text-decoration: none;
-        font-size: 17px;
+        font-size: 20px;
         font-weight: bold;
         font-family: Arial, Helvetica, sans-serif;
     }
@@ -86,8 +87,7 @@
     /* overflow: hidden; */
     }   
 
-    .dropdown .dropbtn {
-    font-size: 16px;  
+    .dropdown .dropbtn {  
     border: none;
     outline: none;
     color: white;
@@ -95,7 +95,7 @@
     background-color: inherit;
     /* font-family: inherit; */
     margin: 0;
-    font-size: 17px;
+    font-size: 20px;
     font-weight: bold;
     font-family: Arial, Helvetica, sans-serif;
     }
@@ -141,7 +141,7 @@
     }   
 
     .dropdown .dropbtn {
-    font-size: 16px;  
+    font-size: 20px;  
     border: none;
     outline: none;
     color: white;
@@ -149,7 +149,6 @@
     background-color: inherit;
     /* font-family: inherit; */
     margin: 0;
-    font-size: 17px;
     font-weight: bold;
     font-family: Arial, Helvetica, sans-serif;
     }

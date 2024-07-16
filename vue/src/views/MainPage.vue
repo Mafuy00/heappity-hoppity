@@ -10,9 +10,25 @@ import TheWelcome from '../components/TheWelcome.vue'
           
           <div class="mainPic">
               <div class="signup">
-                  <p> Start your Financial Journey Here! <br>
-                      Sign up now!<br>
-                      <input type="button" value="Sign Up" id="signupBtn">
+                  <p> Welcome Asher Brown, 
+                    <br>Choose your theme here!<br><br>
+                    <button type="button" class="btn btn-lg">Light</button>
+                    &nbsp&nbsp
+                    <button type="button" class="btn btn-lg">Dark</button>
+                    <br>
+                    <button type="button" class="btn btn-lg">Contrasting palette 1</button>
+                    &nbsp&nbsp
+                    <button type="button" class="btn btn-lg">Contrasting palette 2</button>
+                    <br>
+                    <button type="button" class="btn btn-lg">Vibrant</button>
+                    &nbsp&nbsp
+                    <button type="button" class="btn btn-lg">Monochromatic</button>
+                    <br>
+                    <button type="button" class="btn btn-lg">Red-Green Color</button>
+                    &nbsp&nbsp
+                    <button type="button" class="btn btn-lg">Blue-Yellow Color</button>
+                      <!-- Sign up now!<br>
+                      <input type="button" value="Sign Up" id="signupBtn"> -->
                   </p>
   
                   
@@ -38,32 +54,28 @@ import TheWelcome from '../components/TheWelcome.vue'
                   </div>
               </div>
           </div>
-  
-  
-              <!-- <div class="col">
-                  <div class="card">
-                  <img src="/img/buildings.jpg" class="card-img-top" alt="...">
-                  <div class="card-body">
-                      <h3 class="card-title">Our Vision</h3>
-                      <p class="card-text">Redesigning financial accessibility for inclusivity</p>
-                  </div>
-                  </div>
-              </div>
-              <div class="col">
-                  <div class="card">
-                  <img src="/img/mission.jpg" class="card-img-top" alt="...">
-                  <div class="card-body">
-                      <h3 class="card-title">Our Mission</h3>
-                      <p class="card-text">Assisting Persons with Disabilities in accessing critical financial information</p>
-                  </div>
-                  </div>
-              </div> -->
           
   
       </body>
   </template>
   
   <style scoped>
+
+.btn{
+        color:white;
+        font-weight: bold;
+        border-color: black;
+        width: 300px;
+        flex-direction: row;
+        flex-wrap: wrap;
+        display:inline-block;
+        background-color: #0F4C75;
+    }
+
+    .btn:hover{
+        background-color: white;
+        color: black;
+    }
   
   body {
         margin: 0px;
@@ -265,7 +277,7 @@ import TheWelcome from '../components/TheWelcome.vue'
   
   .signup p {
       margin-left: 30%;
-      margin-top: 50%;
+      margin-top: 30%;
       font-weight: bold;
       font-family: Arial, Helvetica, sans-serif;
       text-shadow: 2px 2px 2px black;

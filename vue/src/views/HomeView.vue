@@ -37,7 +37,25 @@ import TheWelcome from '../components/TheWelcome.vue'
         
         <div class="mainPic">
             <div class="signup">
-                <p> Start your Financial Journey Here! <br>
+                <p> 
+                    Tailor the theme to your needs here:<br>
+                    <button type="button" class="btn btn-lg">Light</button>
+                    &nbsp&nbsp
+                    <button type="button" class="btn btn-lg">Dark</button>
+                    <br>
+                    <button type="button" class="btn btn-lg">Contrasting palette 1</button>
+                    &nbsp&nbsp
+                    <button type="button" class="btn btn-lg">Contrasting palette 2</button>
+                    <br>
+                    <button type="button" class="btn btn-lg">Vibrant</button>
+                    &nbsp&nbsp
+                    <button type="button" class="btn btn-lg">Monochromatic</button>
+                    <br>
+                    <button type="button" class="btn btn-lg">Red-Green Color</button>
+                    &nbsp&nbsp
+                    <button type="button" class="btn btn-lg">Blue-Yellow Color</button>
+                    <br><br>
+                    Start your Financial Journey Here! <br>
                     Sign up now!<br>
                     <input type="button" value="Sign Up" id="signupBtn">
                 </p>
@@ -92,6 +110,22 @@ import TheWelcome from '../components/TheWelcome.vue'
 
 <style scoped>
 
+.btn{
+        color:white;
+        font-weight: bold;
+        border-color: black;
+        width: 300px;
+        flex-direction: row;
+        flex-wrap: wrap;
+        display:inline-block;
+        background-color: #0F4C75;
+    }
+
+    .btn:hover{
+        background-color: white;
+        color: black;
+    }
+
 body{
     margin: 0px;
     border:0px;
@@ -113,7 +147,7 @@ body{
     text-align: right;
     padding: 14px 16px;
     text-decoration: none;
-    font-size: 17px;
+    font-size: 20px;
     font-weight: bold;
     font-family: Arial, Helvetica, sans-serif;
   }
@@ -167,11 +201,6 @@ body{
     /* width: 100%; */
 }
 
-/* img {
-    height: auto; 
-    max-width: 100%;
-    object-fit: fill;
-} */
 
 /*For the main container pic*/
 .mainPic{
@@ -188,7 +217,7 @@ body{
 
 .signup p {
     margin-left: 30%;
-    margin-top: 50%;
+    margin-top: 15%;
     font-weight: bold;
     font-family: Arial, Helvetica, sans-serif;
     text-shadow: 2px 2px 2px black;
@@ -246,50 +275,6 @@ body{
 .card-title {
     font-weight: bold;
 }
-
-
-
-/* .row {
-    display: flex;
-  }
-
-.column {
-    flex: 80%;
-    padding: 5px;
-}
-
-div.polaroid {
-    width: 48%;
-    background-color: white;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    margin-bottom: 25px;
-    margin-top: 10px;
-    margin-left: 10px;
-    font-size: 20px;
-  }
-  
-  div.polaroid_container {
-    text-align: center;
-    padding: 10px 20px;
-    font-family: Arial, Helvetica, sans-serif;
-  } */
-
-/* #buildings{
-    width: 100%;
-}   */
-
-/* div.polaroid-right{
-    width: 48%;
-    background-color: white;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    margin-bottom: 25px;
-    margin-top: 10px;
-    margin-right: 10px;
-    float: right;
-    font-size: 20px;
-  } */
-
-
 
 </style>
 

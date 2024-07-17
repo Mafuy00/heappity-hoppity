@@ -8,7 +8,7 @@
         
         <div id="main">
             <div id="login">
-                <h1>Online Banking</h1>
+                <h1>Login/Register</h1>
                 <div>
                     <input id="username" type="text" placeholder="Username">
                 </div>
@@ -22,11 +22,15 @@
                     <router-link to="/register">
                         <button id="register-btn">Register</button>
                     </router-link>
+                    <br>
+                    <router-link to="/">
+                        <b class="bi bi-arrow-return-left">Back</b>
+                    </router-link>
                     
                 </div>
             </div>
 
-            <div id="nav-link">
+            <!-- <div id="nav-link">
                 <ul>
                     <li>
                         <a href="...">Forgot <b>Username</b> OR <b>Password</b></a>
@@ -43,7 +47,7 @@
                         </router-link>
                     </li>
                 </ul>
-            </div>
+            </div> -->
 
         </div>
 
@@ -86,7 +90,8 @@
         display: flex;
         width: 100%;
         margin-left: 10px;
-        margin-top: 14px;
+        margin-top: 28px;
+        font-size: 30px;
     }
 
     #login {
@@ -98,6 +103,7 @@
         display: flex;
         flex-direction: column;
         justify-content: space-around;
+        font-size: 20px;
     }
 
     #nav-link{
@@ -113,7 +119,7 @@
     }
 
     a {
-        color: white;
+        color: black;
         text-decoration: none;
     }
 
@@ -132,10 +138,15 @@
     }
 
     #login-btn{
-        background-color: #0A043C;
+        background-color: #0F4C75;
         color: white;
         border: solid black 1px;
         height: 7vh;
+    }
+
+    #login-btn:hover{
+        background-color: black;
+        color: white;
     }
 
     #register-btn{
@@ -143,6 +154,15 @@
         color: black;
         border: solid black 1px;
         height: 7vh;
+    }
+
+    #register-btn:hover{
+        background-color: black;
+        color: white;
+    }
+
+    .bi:hover{
+        text-decoration: underline;
     }
 
 </style>

@@ -24,8 +24,6 @@ import TheWelcome from '../components/TheWelcome.vue'
 
             <div class="topnav-right">
                 <a class="active" href="#home">Home</a>
-                <a href="#aboutus">About Us</a>
-                <a href="#contactus">Contact Us</a>
             
                 <router-link to="/login">Login</router-link>
                 <img id="login-pic" src="/img/icons8-male-user-48.png" alt="Bank Building Image"> 
@@ -57,7 +55,7 @@ import TheWelcome from '../components/TheWelcome.vue'
                     <br><br>
                     Start your Financial Journey Here! <br>
                     Sign up now!<br>
-                    <input type="button" value="Sign Up" id="signupBtn">
+                    <router-link to="/register"><input type="button" value="Sign Up" id="signupBtn"></router-link>
                 </p>
 
                 

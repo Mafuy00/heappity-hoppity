@@ -9,7 +9,7 @@
 
             <div class="topnav-right">
                 <router-link to="/mainPage">Home</router-link>
-
+                
                 <div class="dropdown">
                     <button class="dropbtn">Services
                     <i class="fa fa-caret-down"></i>
@@ -22,7 +22,7 @@
                 </div> 
 
                 
-                <a href="#aboutus">About Us</a>
+                <router-link to="/about">About Us</router-link>
                 <div class="dropdown">
                     <button class="dropbtn">Hi, Asher Brown!
                     <i class="fa fa-caret-down"></i>

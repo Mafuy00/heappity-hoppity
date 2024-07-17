@@ -10,7 +10,7 @@ import 'primeicons/primeicons.css'
         
         <div id="main">
             <div id="login">
-                <h1>Online Banking</h1>
+                <h1>Registration</h1>
                 <div>
                     <input id="username" type="text" placeholder="Username">
                 </div>
@@ -27,10 +27,16 @@ import 'primeicons/primeicons.css'
                     <router-link to="/mainPage">
                         <button id="register-btn">Register</button>
                     </router-link>
+                    <br>
+                    <router-link to="/login" id="gotAccount">Got an account? Login here!</router-link>
+                    <br>
+                    <router-link to="/">
+                        <b class="bi bi-arrow-return-left">Back</b>
+                    </router-link>
                 </div>
             </div>
 
-            <div id="nav-link">
+            <!-- <div id="nav-link">
                 <ul>
                     <li>
                         <a href="...">Forgot <b>Username</b> OR <b>Password</b></a>
@@ -47,7 +53,7 @@ import 'primeicons/primeicons.css'
                         </router-link>
                     </li>
                 </ul>
-            </div>
+            </div> -->
         </div>
 
     </body>
@@ -66,6 +72,7 @@ import 'primeicons/primeicons.css'
         display: flex;
         justify-content: space-around;
         height: 75%;
+        font-size: 20px;
     }
 
     #image{
@@ -89,7 +96,8 @@ import 'primeicons/primeicons.css'
         display: flex;
         width: 100%;
         margin-left: 10px;
-        margin-top: 14px;
+        margin-top: 28px;
+        font-size: 30px;
     }
 
     #login {
@@ -135,10 +143,32 @@ import 'primeicons/primeicons.css'
     }
 
     #register-btn{
-        background-color: #0A043C;
+        background-color: #0F4C75;
         color: white;
         border: solid black 1px;
         height: 7vh;
+    }
+
+    #register-btn:hover{
+        background-color: black;
+        color: white;
+    }
+
+    #gotAccount{
+        color: black;
+        text-decoration: underline;
+    }
+
+    #gotAccount:hover{
+        font-weight: bold;
+    }
+
+    .bi{
+        color:black;
+    }
+
+    .bi:hover{
+        text-decoration: underline;
     }
 
 </style>

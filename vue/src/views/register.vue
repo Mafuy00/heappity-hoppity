@@ -78,6 +78,7 @@ import 'primeicons/primeicons.css'
     #image{
         display: flex;
         padding: 1%;
+        width: 2000px;
     }
 
     #logo {

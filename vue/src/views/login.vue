@@ -72,10 +72,11 @@
     #image{
         display: flex;
         padding: 1%;
+        width: 2000px;
     }
 
     #logo {
-        width: 5%;
+        width: 5% !important;
         height: 4%;
         padding: 0px;
         display: flex;

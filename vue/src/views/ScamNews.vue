@@ -69,6 +69,10 @@
         margin: 0px;
     }
 
+    a { 
+        font-size: 20px;
+    }
+
     .topnav {
         background-color: #0F4C75;
         /* overflow: hidden; */

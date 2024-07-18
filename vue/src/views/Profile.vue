@@ -119,6 +119,7 @@
     <style scoped>
     body {
         background-color: #0F4C75 !important;
+        font-size: 20px;
     }
 
     .topnav {

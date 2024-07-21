@@ -57,7 +57,7 @@ def add_expense():
     cur = con.cursor()
 
     try:
-        cur.execute(f'INSERT INTO expense (accountid, transaction_type, amount, bank, category, date_time) VALUES (%s, %s, %s, %s, %s)', (accountid, transaction_type, amount, bank, category, date_time))
+        cur.execute(f'INSERT INTO expense (accountid, transaction_type, amount, bank, category, date_time) VALUES (%s, %s, %s, %s, %s, %s)', (accountid, transaction_type, amount, bank, category, date_time))
         cur.execute(f'SELECT * FROM expense ORDER BY accountid DESC')
         new_expense = cur.fetchone()
         expense_json = {"expenseid": new_expense[0],"accountid": new_expense[1], "transaction_type": new_expense[2], "amount": new_expense[3], "bank": new_expense[4], "category": new_expense[5], "date_time": new_expense[6]}
@@ -79,20 +79,24 @@ def add_expense():
         })
 
 
-@app.route('/diet/delete', methods=['DELETE'])
+@app.route('/account/delete', methods=['DELETE'])
 def delete_expense():
-    
+    print(request.get_json())
     data = request.get_json()
     accountid = data["accountid"]
+    transaction_type = data["transaction_type"]
+    amount = data["amount"]
+    bank = data["bank"]
+    category = data["category"]
+    date_time = data["date_time"]
 
     con = get_db_connection(config)
     cur = con.cursor()
 
     try:
-        cur.execute(f'SELECT * FROM expense WHERE accountid={accountid}')
+        cur.execute(f'SELECT * FROM expense WHERE accountid=%s AND transaction_type=%s AND amount=%s AND bank=%s AND category=%s AND date_time=%s', (accountid, transaction_type, amount, bank, category, date_time))
         deleted_expense = cur.fetchone()[0]
-
-        cur.execute(f'DELETE FROM expense WHERE accountid={accountid}')
+        cur.execute(f'DELETE FROM expense WHERE accountid=%s AND transaction_type=%s AND amount=%s AND bank=%s AND category=%s AND date_time=%s', (accountid, transaction_type, amount, bank, category, date_time))
 
         con.commit()
         cur.close()
@@ -111,7 +115,7 @@ def delete_expense():
         })
 
 
-@app.route('/diet/update', methods=['PUT'])
+@app.route('/account/update', methods=['PUT'])
 def update_expense():
 
     data = request.get_json()

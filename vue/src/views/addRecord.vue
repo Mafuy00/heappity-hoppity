@@ -24,15 +24,15 @@
                     <!-- <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Category"> -->
                     <br>
                     <select name="category" id="category" class="form-control" v-model="formData.category">
-                        <option value="food">Food</option>
-                        <option value="transport">Transport</option>
-                        <option value="entertainment">Entertainment</option>
-                        <option value="personalCare">Personal Care</option>
-                        <option value="medical">Medical Expenses</option>
-                        <option value="travel">Travel</option>
-                        <option value="gifts">Gifts & Donations</option>
-                        <option value="social">Social Activities</option>
-                        <option value="others">Others</option>
+                        <option value="Food">Food</option>
+                        <option value="Transport">Transport</option>
+                        <option value="Entertainment">Entertainment</option>
+                        <option value="Personal Care">Personal Care</option>
+                        <option value="Medical">Medical Expenses</option>
+                        <option value="Travel">Travel</option>
+                        <option value="Gifts">Gifts & Donations</option>
+                        <option value="Social">Social Activities</option>
+                        <option value="Others">Others</option>
                     </select>
                 </div>
                 <br>
@@ -46,32 +46,32 @@
                 <br>
                 <div class="form-group">
                     <label for="formGroupExampleInput">Amount</label>
-                    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Amount (E.g: 48.10)" v-model="formData.amount">
+                    <input type="number" class="form-control" id="formGroupExampleInput" placeholder="Amount (E.g: 48.10)" v-model="formData.amount">
                 </div>
                 <br>
                 <div class="form-group">
                     <label for="formGroupExampleInput">Bank Type</label>
                     <select name="bankType" id="bankType" class="form-control" v-model="formData.bank">
-                        <option value="dbs">DBS</option>
-                        <option value="posb">POSB</option>
-                        <option value="uob">UOB</option>
-                        <option value="ocbc">OCBC</option>
-                        <option value="citibank">Citibank</option>
-                        <option value="hsbc">HSBC</option>
-                        <option value="bankOthers">Others</option>
+                        <option value="DBS">DBS</option>
+                        <option value="POSB">POSB</option>
+                        <option value="UOB">UOB</option>
+                        <option value="OCBC">OCBC</option>
+                        <option value="Citibank">Citibank</option>
+                        <option value="HSBC">HSBC</option>
+                        <option value="Others">Others</option>
                     </select>
                 </div>
                 <br>
                 <div class="form-group">
                     <label for="formGroupExampleInput3">Account</label>
                     <select name="description" id="description" class="form-control" v-model="formData.accountid">
-                        <option value="account1">Account 1</option>
-                        <option value="account2">Account 2</option>
-                        <option value="account2">Account 3</option>
+                        <option value="Account1">Account 1</option>
+                        <option value="Account2">Account 2</option>
+                        <option value="Account3">Account 3</option>
                     </select>
                 </div>
                 <br>
-                <a href="/accounts/account1"><button type="submit" class="btn btn-lg">Add record</button></a>
+                <a href="/accounts/account1"><button type="button" class="btn btn-lg">Add record</button></a>
                 </form>
             </div>
         </div>
@@ -154,13 +154,12 @@ export default {
           bank: '',
           category: '',
           date_time:'',
-      },
-      msg: '',
+      }
     };
   },
   methods: {
       addRecord() {
-      const path = 'http://127.0.0.1:5000/account/add';
+          const path = 'http://127.0.0.1:5000/account/add';
       axios.post(path, this.formData)
         .then((res) => {
           this.msg = res.data;

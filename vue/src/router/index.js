@@ -164,7 +164,10 @@ const router = createRouter({
     },
     {
       path: '/account/add',
-    },    
+    },
+    {
+      path: '/account/delete',
+    }
   ]
 })
 

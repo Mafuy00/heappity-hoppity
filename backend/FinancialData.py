@@ -81,14 +81,13 @@ def add_expense():
 
 @app.route('/account/delete', methods=['DELETE'])
 def delete_expense():
-    print(request.get_json())
-    data = request.get_json()
-    accountid = data["accountid"]
-    transaction_type = data["transaction_type"]
-    amount = data["amount"]
-    bank = data["bank"]
-    category = data["category"]
-    date_time = data["date_time"]
+
+    accountid = request.args.get('accountid')
+    transaction_type = request.args.get('transaction_type')
+    amount = request.args.get('amount')
+    bank = request.args.get('bank')
+    category = request.args.get('category')
+    date_time = request.args.get('date_time')
 
     con = get_db_connection(config)
     cur = con.cursor()

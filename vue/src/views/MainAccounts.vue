@@ -282,14 +282,15 @@ export default {
 
       deleteRecord() {
         const path = 'http://127.0.0.1:5000/account/delete';
-          axios.delete(path, this.formData)
+        const params = new URLSearchParams(this.formData).toString()
+        axios.delete(`${path}?${params}`)
             .then((res) => {
             this.msg = res.data["message"];
             })
             .catch((error) => {
             console.error(error);
             this.msg = 'An error occurred while deleting the record.';
-          });
+            });
       }
   },
 }

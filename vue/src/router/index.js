@@ -161,8 +161,10 @@ const router = createRouter({
     {
       path: '/accounts/addRecord',
       component: addRecord
-    }
-    
+    },
+    {
+      path: '/account/add',
+    },    
   ]
 })
 

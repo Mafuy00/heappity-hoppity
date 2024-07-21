@@ -51,12 +51,13 @@ def add_expense():
     amount = data["amount"]
     bank = data["bank"]
     category = data["category"]
+    date_time = data["date_time"]
 
     con = get_db_connection(config)
     cur = con.cursor()
 
     try:
-        cur.execute(f'INSERT INTO expense (accountid, transaction_type, amount, bank, category) VALUES (%s, %s, %s, %s, %s)', (accountid, transaction_type, amount, bank, category,))
+        cur.execute(f'INSERT INTO expense (accountid, transaction_type, amount, bank, category, date_time) VALUES (%s, %s, %s, %s, %s)', (accountid, transaction_type, amount, bank, category, date_time))
         cur.execute(f'SELECT * FROM expense ORDER BY accountid DESC')
         new_expense = cur.fetchone()
         expense_json = {"expenseid": new_expense[0],"accountid": new_expense[1], "transaction_type": new_expense[2], "amount": new_expense[3], "bank": new_expense[4], "category": new_expense[5], "date_time": new_expense[6]}
@@ -119,6 +120,7 @@ def update_expense():
     amount = data["amount"]
     bank = data["bank"]
     category = data["category"]
+    date_time = data["date_time"]
 
     con = get_db_connection(config)
     cur = con.cursor()
@@ -131,7 +133,7 @@ def update_expense():
             print('Account does not exist!')
             return
         
-        cur.execute(f"UPDATE expense SET transaction_type=%s, amount=%s, bank=%s, category=%s, WHERE accountid = %s", (transaction_type, amount, bank, category, accountid,))
+        cur.execute(f"UPDATE expense SET transaction_type=%s, amount=%s, bank=%s, category=%s, date_time=%s, WHERE accountid = %s", (transaction_type, amount, bank, category, date_time, accountid,))
 
         cur.execute(f"SELECT * FROM expense WHERE accountid={accountid}")
         updated_expense = cur.fetchone()[2]

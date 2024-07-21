@@ -13,17 +13,17 @@
             <div class="card-body">
                 <h2>Add New Record</h2>
                 <br>
-                <form>
+                <form @submit.prevent="addRecord">
                 <div class="form-group">
                     <label for="formGroupExampleInput">Date (DD/MM/YYYY)</label>
-                    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Date (DD/MM/YYYY)">
+                    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Date (DD/MM/YYYY)" v-model="formData.date_time">
                 </div>
                 <br>
                 <div class="form-group">
                     <label for="formGroupExampleInput2">Category</label>
                     <!-- <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Category"> -->
                     <br>
-                    <select name="category" id="category" class="form-control">
+                    <select name="category" id="category" class="form-control" v-model="formData.category">
                         <option value="food">Food</option>
                         <option value="transport">Transport</option>
                         <option value="entertainment">Entertainment</option>
@@ -38,7 +38,7 @@
                 <br>
                 <div class="form-group">
                     <label for="formGroupExampleInput3">Description (Credit/Debit)</label>
-                    <select name="description" id="description" class="form-control">
+                    <select name="description" id="description" class="form-control" v-model="formData.transaction_type">
                         <option value="credit">Credit</option>
                         <option value="debit">Debit</option>
                     </select>
@@ -46,12 +46,12 @@
                 <br>
                 <div class="form-group">
                     <label for="formGroupExampleInput">Amount</label>
-                    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Amount (E.g: 48.10)">
+                    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Amount (E.g: 48.10)" v-model="formData.amount">
                 </div>
                 <br>
                 <div class="form-group">
                     <label for="formGroupExampleInput">Bank Type</label>
-                    <select name="bankType" id="bankType" class="form-control">
+                    <select name="bankType" id="bankType" class="form-control" v-model="formData.bank">
                         <option value="dbs">DBS</option>
                         <option value="posb">POSB</option>
                         <option value="uob">UOB</option>
@@ -64,14 +64,14 @@
                 <br>
                 <div class="form-group">
                     <label for="formGroupExampleInput3">Account</label>
-                    <select name="description" id="description" class="form-control">
+                    <select name="description" id="description" class="form-control" v-model="formData.accountid">
                         <option value="account1">Account 1</option>
                         <option value="account2">Account 2</option>
                         <option value="account2">Account 3</option>
                     </select>
                 </div>
                 <br>
-                <a href="/accounts/account1"><button type="button" class="btn btn-lg">Add record</button></a>
+                <a href="/accounts/account1"><button type="submit" class="btn btn-lg">Add record</button></a>
                 </form>
             </div>
         </div>
@@ -139,3 +139,37 @@ body {
     border-color: #0F4C75;
 }
 </style>
+
+<script>
+import axios from 'axios';
+
+export default {
+  name: 'addRecord',
+  data() {
+      return {
+          formData: {
+          accountid: '',
+          transaction_type: '',
+          amount: '',
+          bank: '',
+          category: '',
+          date_time:'',
+      },
+      msg: '',
+    };
+  },
+  methods: {
+      addRecord() {
+      const path = 'http://127.0.0.1:5000/account/add';
+      axios.post(path, this.formData)
+        .then((res) => {
+          this.msg = res.data;
+        })
+        .catch((error) => {
+          console.error(error);
+          this.msg = 'An error occurred while adding the record.';
+        });
+    },
+  },
+};
+</script>

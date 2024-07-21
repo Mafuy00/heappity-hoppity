@@ -1,14 +1,5 @@
 <template>
-
-    <head>
-        <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"> -->
-    </head>
-
     <body>
-            <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>  -->
-            
-
-
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-12 col-lg-10 col-xl-8 mx-auto">
@@ -26,28 +17,226 @@
                                 </li>
                             </ul>
                         </div>
-                        <button type="button" class="btn btn-lg">Add account</button>
-                        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-                        <button type="button" class="btn btn-lg">Delete account</button>
-                        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-                        <a href="/accounts/addRecord"><button type="button" class="btn btn-lg">Add record</button></a>
-                        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-                        <button type="button" class="btn btn-lg">Delete record</button>
 
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal"> Launch demo modal </button> 
-<!-- Modal --> <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true"> 
-    <div class="modal-dialog" role="document"> <div class="modal-content"> <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5> 
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"> 
-            <span aria-hidden="true">&times;</span> </button> </div> 
-            <div class="modal-body"> ... </div> 
-            <div class="modal-footer"> 
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button> 
-                <button type="button" class="btn btn-primary">Save changes</button> </div> </div> </div> </div>
+                        <!--Add Account Modal-->
+                        <div class="modal fade" id="mymodal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Add Account</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
 
+                                    <form>
+                                    <div class="mb-3">
+                                        <label for="exampleInputEmail1" class="form-label">Bank Account Name</label>
+                                        <input type="text" class="form-control" id="accountName">
+                                        
+                                    </div>
+                                    <button type="submit" class="btn btn-primary">Create</button>
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                </div>
+                                </div>
+                            </div>
+                            </div>
+
+                            <!--Delete Account Modal-->
+                        <div class="modal fade" id="deletemodal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Delete Account</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+
+                                    <form>
+                                    <div class="mb-3">
+                                        <label for="exampleInputEmail1" class="form-label">Bank Account Name</label>
+                                        <input type="text" class="form-control" id="accountName">
+                                        
+                                    </div>
+                                    <button type="submit" class="btn btn-danger">Delete</button>
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                </div>
+                                </div>
+                            </div>
+                            </div>
+                        
+                        <!--Add Record Modal-->
+                        <div class="modal fade" id="addrecord" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Add Record</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+
+                                    <form>
+                                    <div class="mb-3">
+                                        <label for="Date" class="form-label">Date (DD/MM/YYYY)</label>
+                                        <input type="text" class="form-control" id="date" placeholder="Date (DD/MM/YYYY)">
+                                    </div>
+                                    <div class="form-group">
+                                    <label for="formGroupExampleInput2">Category</label>
+                                    <br>
+                                    <select name="category" id="category" class="form-control">
+                                        <option value="food">Food</option>
+                                        <option value="transport">Transport</option>
+                                        <option value="entertainment">Entertainment</option>
+                                        <option value="personalCare">Personal Care</option>
+                                        <option value="medical">Medical Expenses</option>
+                                        <option value="travel">Travel</option>
+                                        <option value="gifts">Gifts & Donations</option>
+                                        <option value="social">Social Activities</option>
+                                        <option value="others">Others</option>
+                                    </select>
+                                    <br>
+                                <div class="form-group">
+                                    <label for="formGroupExampleInput3">Description (Credit/Debit)</label>
+                                    <select name="description" id="description" class="form-control">
+                                        <option value="credit">Credit</option>
+                                        <option value="debit">Debit</option>
+                                    </select>
+                                </div>
+                                <br>
+                                <div class="form-group">
+                                    <label for="formGroupExampleInput">Amount</label>
+                                    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Amount (E.g: 48.10)">
+                                </div>
+                                <br>
+                                <div class="form-group">
+                                    <label for="formGroupExampleInput">Bank Type</label>
+                                    <select name="bankType" id="bankType" class="form-control">
+                                        <option value="dbs">DBS</option>
+                                        <option value="posb">POSB</option>
+                                        <option value="uob">UOB</option>
+                                        <option value="ocbc">OCBC</option>
+                                        <option value="citibank">Citibank</option>
+                                        <option value="hsbc">HSBC</option>
+                                        <option value="bankOthers">Others</option>
+                                    </select>
+                                </div>
+                                <br>
+                                <div class="form-group">
+                                    <label for="formGroupExampleInput3">Account</label>
+                                    <select name="description" id="description" class="form-control">
+                                        <option value="account1">Account 1</option>
+                                        <option value="account2">Account 2</option>
+                                        <option value="account2">Account 3</option>
+                                    </select>
+                                </div>
+                                <br>
+                                </div>
+                                    <button type="submit" class="btn btn-primary">Add</button>
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                </div>
+                                </div>
+                            </div>
+                            </div>
+
+                        <!--Delete Record Modal-->
+                        <div class="modal fade" id="deleterecord" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Delete Record</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+
+                                    <form>
+                                    <div class="mb-3">
+                                        <label for="Date" class="form-label">Date (DD/MM/YYYY)</label>
+                                        <input type="text" class="form-control" id="date" placeholder="Date (DD/MM/YYYY)">
+                                    </div>
+                                    <div class="form-group">
+                                    <label for="formGroupExampleInput2">Category</label>
+                                    <br>
+                                    <select name="category" id="category" class="form-control">
+                                        <option value="food">Food</option>
+                                        <option value="transport">Transport</option>
+                                        <option value="entertainment">Entertainment</option>
+                                        <option value="personalCare">Personal Care</option>
+                                        <option value="medical">Medical Expenses</option>
+                                        <option value="travel">Travel</option>
+                                        <option value="gifts">Gifts & Donations</option>
+                                        <option value="social">Social Activities</option>
+                                        <option value="others">Others</option>
+                                    </select>
+                                    <br>
+                                <div class="form-group">
+                                    <label for="formGroupExampleInput3">Description (Credit/Debit)</label>
+                                    <select name="description" id="description" class="form-control">
+                                        <option value="credit">Credit</option>
+                                        <option value="debit">Debit</option>
+                                    </select>
+                                </div>
+                                <br>
+                                <div class="form-group">
+                                    <label for="formGroupExampleInput">Amount</label>
+                                    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Amount (E.g: 48.10)">
+                                </div>
+                                <br>
+                                <div class="form-group">
+                                    <label for="formGroupExampleInput">Bank Type</label>
+                                    <select name="bankType" id="bankType" class="form-control">
+                                        <option value="dbs">DBS</option>
+                                        <option value="posb">POSB</option>
+                                        <option value="uob">UOB</option>
+                                        <option value="ocbc">OCBC</option>
+                                        <option value="citibank">Citibank</option>
+                                        <option value="hsbc">HSBC</option>
+                                        <option value="bankOthers">Others</option>
+                                    </select>
+                                </div>
+                                <br>
+                                <div class="form-group">
+                                    <label for="formGroupExampleInput3">Account</label>
+                                    <select name="description" id="description" class="form-control">
+                                        <option value="account1">Account 1</option>
+                                        <option value="account2">Account 2</option>
+                                        <option value="account2">Account 3</option>
+                                    </select>
+                                </div>
+                                <br>
+                                </div>
+                                    <button type="submit" class="btn btn-danger">Delete</button>
+                                    </form>
+                                </div>
+                                
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                </div>
+                                </div>
+                            </div>
+                            </div>
+
+
+                        <button type="button" class="btn btn-lg" data-bs-toggle="modal" data-bs-target="#mymodal">Add account</button>
+                        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                        <button type="button" class="btn btn-lg" data-bs-toggle="modal" data-bs-target="#deletemodal">Delete account</button>
+                        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                        <!-- <a href="/accounts/addRecord"><button type="button" class="btn btn-lg">Add record</button></a> -->
+                        <button type="button" class="btn btn-lg" data-bs-toggle="modal" data-bs-target="#addrecord">Add record</button>
+                        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                        <button type="button" class="btn btn-lg" data-bs-toggle="modal" data-bs-target="#deleterecord">Delete record</button>
+
+
+                        </div>
                     </div>
                 </div>
-            </div>
 
                 <div>
                 <router-view />
@@ -57,8 +246,20 @@
         </body>
 </template>
 
+<script>
+//importing bootstrap 5
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/js/bootstrap.min.js";
+export default {
+ 
+}
+</script>
 
 <style scoped>
+.modal_header{
+    color:black;
+}
+
 .recordDelete{
     color:white;
 }

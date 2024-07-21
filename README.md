@@ -4,5 +4,5 @@
   <br>
   <a href="https://www.figma.com/proto/tcBiYWpG4CkybiDOifpFqs/Hifi-Heappity-Hoppity?node-id=0-1&t=mC8ERiAmy5J06a5L-1">Figma Hifi Prototype Link</a>
   <br>
-  ** Note that the main app is in vue folder and ignore the archive branch
+  ** Note that the main app is in vue folder, backend is in the backend folder and ignore the archive branch
 </p>
